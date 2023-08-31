@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Linear Transformation Visualizer</title>
+  <link href="index.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://livejs.com/live.js"></script>
+  <script src="https://unpkg.com/easypz@latest/easypz.js"> </script>
+</head>
+<body>
+  <span onclick="openNav()">
+    <svg xmlns="http://www.w3.org/2000/svg" height="10px" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#ffffff}</style><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L301.3 256 438.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z"/></svg>
+  </span>
+  <div id="mySidenav" class="sidenav">
+    <p>Matrix</p>
+ 
+    <div class="matrix-entry">
+      <h1 id="bracket-start">[</h1>
+      <div class="i-hat-matrix">
+        <input label="i-hat-x" id="i-hat-x" type="nummber" value="1">
+        <input label="i-hat-y" id="i-hat-y" type="nummber" value="0">
+      </div>
+      <div class="j-hat-matrix">
+        <input label="j-hat-x" id="j-hat-x" type="nummber" value="0">
+        <input label="j-hat-y" id="j-hat-y" type="nummber" value="1">
+      </div>
+      <h1 id="bracket-end">]</h1>
+    </div>
+    <button name="submit" id="matrix-submit" onclick="transform()">Submit</button>
+  </div>
+  <canvas id="grid" class="grid" easypz>
+  </canvas>
+  <script src="index.js"></script>
+</body>
+</html>
